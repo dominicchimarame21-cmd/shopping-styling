@@ -1,0 +1,75 @@
+.navbar{
+    border-radius: 0;
+    
+
+    
+}
+.hero{
+    background: darkslategrey;
+    padding: 40px;
+    color: white;
+    margin-top: -3vh;
+    
+}
+.hero h1{
+    font-size: 75px;
+}
+.hero p{
+    font-size: 20px;
+}
+.hero a{
+    background-color: darkgray;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-top: 5vh;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.services {
+    display: flex;
+    background-color: darkslategrey;
+}
+
+.item h1 {
+    font-size: 40px;
+}
+
+.broke {
+    width: 25%;
+    padding: 20px;
+}
+
+.broke img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.broke a:hover {
+   background-color: aqua;
+   text-decoration: none;
+   color: white;
+   padding: 10px 30px;
+   border-radius: 10px;
+   transition: 0.3s ease;
+}
+
+.work {
+    background-color: black;
+    display: flex;
+    padding: 20px;
+    margin-top: 2px;
+}
+.guy {
+    color: white;
+}
+.buy {
+    color: white;
+    margin-left: 80%;
+}
+.Home img{
+    width: 100%;
+    height: 88vh;
+
+}

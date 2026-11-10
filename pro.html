@@ -3,243 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>css class</title>
     <link rel="stylesheet" href="pro.css">
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Sign Up</title>
-    <style>
-        /* Base Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        /* Card Container */
-        .card {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 450px;
-            padding: 40px 30px;
-            overflow: hidden;
-        }
-
-        /* Toggle Navigation */
-        .toggle-box {
-            display: flex;
-            background-color: #f1f5f9;
-            padding: 5px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-
-        .toggle-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: none;
-            font-size: 15px;
-            font-weight: 600;
-            color: #64748b;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .toggle-btn.active {
-            background-color: #ffffff;
-            color: #4a90e2;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Forms Wrapper */
-        .form-container {
-            display: none;
-        }
-
-        .form-container.active {
-            display: block;
-            animation: fadeIn 0.4s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Form Styling Elements */
-        h2 {
-            color: #1e293b;
-            font-size: 26px;
-            margin-bottom: 8px;
-        }
-
-        p {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
-            display: block;
-            font-size: 14px;
-            color: #475569;
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: border-color 0.3s ease;
-        }
-
-        .input-group input:focus {
-            border-color: #4a90e2;
-            outline: none;
-        }
-
-        .form-actions {
-            margin-bottom: 20px;
-            text-align: right;
-        }
-
-        .forgot-pass {
-            color: #4a90e2;
-            font-size: 13px;
-            text-decoration: none;
-        }
-
-        .forgot-pass:hover {
-            text-decoration: underline;
-        }
-
-        /* Button Styling */
-        .btn {
-            width: 100%;
-            padding: 14px;
-            color: #ffffff;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-
-        .btn-login {
-            background-color: #4a90e2;
-        }
-
-        .btn-login:hover {
-            background-color: #357abd;
-        }
-
-        .btn-signup {
-            background-color: #2ecc71;
-        }
-
-        .btn-signup:hover {
-            background-color: #27ae60;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="card">
-        <!-- Toggle Switch Layout -->
-        <div class="toggle-box">
-            <button class="toggle-btn active" onclick="switchForm('login')">Sign In</button>
-            <button class="toggle-btn" onclick="switchForm('signup')">Sign Up</button>
-        </div>
-
-        <!-- Login Panel -->
-        <div id="login-form" class="form-container active">
-            <h2>Welcome Back</h2>
-            <p>Enter your details to stay connected.</p>
-            <form onsubmit="event.preventDefault();">
-                <div class="input-group">
-                    <label for="login-email">Email Address</label>
-                    <input type="email" id="login-email" placeholder="example@mail.com" required>
-                </div>
-                <div class="input-group">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" placeholder="••••••••" required>
-                </div>
-                <div class="form-actions">
-                    <a href="#" class="forgot-pass">Forgot password?</a>
-                </div>
-                <button type="submit" class="btn btn-login">Sign In</button>
-            </form>
-        </div>
-
-        <!-- Sign Up Panel -->
-        <div id="signup-form" class="form-container">
-            <h2>Create Account</h2>
-            <p>Join us today by creating a new account.</p>
-            <form onsubmit="event.preventDefault();">
-                <div class="input-group">
-                    <label for="signup-name">Full Name</label>
-                    <input type="text" id="signup-name" placeholder="John Doe" required>
-                </div>
-                <div class="input-group">
-                    <label for="signup-email">Email Address</label>
-                    <input type="email" id="signup-email" placeholder="example@mail.com" required>
-                </div>
-                <div class="input-group">
-                    <label for="signup-password">Password</label>
-                    <input type="password" id="signup-password" placeholder="••••••••" required>
-                </div>
-                <button type="submit" class="btn btn-signup">Sign Up</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- JavaScript Handling Toggle Interactivity -->
-    <script>
-        function switchForm(type) {
-            // Remove active classes
-            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.form-container').forEach(form => form.classList.remove('active'));
-
-            // Set chosen layout active
-            if (type === 'login') {
-                document.getElementById('login-form').classList.add('active');
-                document.querySelectorAll('.toggle-btn')[0].classList.add('active');
-            } else {
-                document.getElementById('signup-form').classList.add('active');
-                document.querySelectorAll('.toggle-btn')[1].classList.add('active');
-            }
-        }
-    </script>
-</body>
-</html>
-
-<body>
+    <link rel="stylesheet"  href="fontawesome/fontawesome/css/all.css">
     
-</body>
-</html>
+</head>
+    <body>
+        <div class="header">
+            <nav>
+                <span>styles</span>
+                <span>home</span>
+                <span>clothes</span>
+                <span>shoes</span>
+                <span>wigs</span>
+                <span>about</span>
+                <span>contact</span>
+                <span><input type="text" placeholder="search product..."></span>
+                <span><a href="#"><sup>0</sup></a></span>
+
+            </nav>
+        </div>
+        <!--<form>
+            <section class="home">
+                 
+                <div class="home-text">
+                    <h1>Elevate your <span>style!</span></h1>
+                <div>p class="text">Discover premium clothes, stylish shoes and luxury wigs crafted to elevate your everyday look.</p>
+                <p class="text">Stay ahead of trends, express yourself, and step out looking bold, beautiful and unstoppable.</p >-->
+               <!--button class="btn-home">Shop Now!</button>
+                </div>
+                 <div class="input-info">
+             <Join shop</h2>
+            <hr>
+           <p>create an account to start shopping</p>
+            <hr>
+            <h2>sign up </h2>-->
+            <form>
+                <section>
+            <div class="food">
+            FUll name
+           <type="text" name="username" pattern="{A-Z,a-z}" title="only the lowercase and the uppercase allowed" placeholder="John" required>
+            <br>
+             <br>
+             email
+            <input type="email" name="email" placeholder="example@gmail.com" required>
+            <br>
+             <br> 
+             password
+            <input type="password" name="password"  placeholder="••••••••" title="must be from 10 to 20 characters with a symbol" required>
+            <br>
+             <br>
+             confirm password
+            <input type="password" name="password" placeholder="••••••••" title="must be the correct"required>
+            <br>
+             <br> 
+             date
+            <input type="date" class="input">
+            <br>
+             <br>
+             <h3>Gender</h3>
+             <label>male
+            <input type="checkbox" >
+            </label>
+            <label>female 
+            <input type="checkbox" >
+            </label><br>
+            <button type ="submit" class="btn-input">submit</button>
+            <button type="reset" class="btn-row" aria-placeholder="reset" >reset</button>
+        </div>
+        </section>
+        </form>
+            
+      </div>
+      <div class="container5">
+            <div class="item">clothes</div>
+            <div class="item">shoes</div>
+            <div class="item">wigs</div>
+            <div class="item">Bag</div>
+            <div class="item">Watch</div>
+            <div class="item">Glasses</div>
+        </div>
+         <div class="work">
+        <div class="guy">
+            <li><a href="#"><span class="fas fa-music"></span> music</a></li>
+            <li><a href="#"><span class="fab fa-facebook"></span> facebook</a></li>
+            <li><a href="#"><span class="fa-brands fa-instagram"></span>instagram</a></li>
+            <li><a href="#"><span class="fab fa-twitter"></span> Twitter</a></li>
+        </div>
+        <div class="buy">
+            <li><span class="fas fa-map-marker-alt"></span>current location<br>African new south</li>
+            <li><a href="#"><span class="fas fa-phone"></span>contact us :+234 8101016407</a></li>
+        </div>
+    </div-->
+
+
+        
+    </body>
+    </html>   
+
+    
+

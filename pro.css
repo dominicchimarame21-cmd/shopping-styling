@@ -1,0 +1,292 @@
+ *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        min-height: 100vh;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    /*==== NAV ====*/
+    .header{
+        width: 100%;
+        height: 5rem;
+
+    }
+    nav{
+        height: 5rem;
+        width: 100%;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        gap: 1rem;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: capitalize;
+        background-color: black;
+        color: white;
+        z-index: 10;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+    nav span:nth-child(1){
+        margin-right: auto;
+        color:#ffd700;
+        font-size: 35px;
+        padding-left: 2.5rem;
+        text-transform: uppercase;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    nav span:nth-child(2):hover,
+    nav span:nth-child(3):hover,
+    nav span:nth-child(4):hover,
+    nav span:nth-child(5):hover,
+    nav span:nth-child(6):hover,
+    nav span:nth-child(7):hover{
+        border-bottom: 2px solid #ffd700;
+        color: #ffd700;
+        cursor: pointer;
+    } 
+    nav span :nth-child(7){
+        margin-left: 2rem;
+    }
+    nav span input{
+        border-radius: 2rem;
+        width:16rem;
+        height: 1.8rem;
+        border: none;
+        background-color: #fff;
+        padding-left: 0.8rem;
+        color: black;
+    }
+    nav span input::placeholder{
+        color: rgb(221,218,218);
+    }
+    nav span:nth-child(9){
+        margin-left: 1rem;
+        padding-right: 2rem;
+    }
+    span a{
+        text-decoration: none;
+        font-size: 22px;
+        color: white;
+    }
+    a sup{
+        background-color: #ffd700;
+        padding: 0.2rem 0.45rem;
+        border-radius: 50%;
+        color: black;
+        font-style:normal;
+        font-size: 13px;
+    }
+    /*==== HERO ====*/
+    *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+    }
+    .home{
+        display: flex;
+        padding: 30px 50px;
+        gap: 150px;
+        background-color: gray;
+    }
+    .home-text{
+        padding: 15px 25px;
+        width: 50%;
+        color: black;
+    }
+    .home-text h1{
+        padding: 10px;
+        
+    }
+    .home-text h1 span{
+        color: #FFD700;
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .home-text .text{
+        font-size: 20px;
+        color: black;
+        padding: 8px;
+    }
+    .home-text .btn-home{
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 90px;
+        border: none;
+        color: black;
+        background-color: rgb(199,199,76);
+        cursor: pointer;
+    }
+    .input-info{
+        padding: 15px 25px;
+        background-color: rgb(199,199,76);
+        border-radius: 10px;
+        margin-left: 20rem;
+    }
+    .input-info h2{
+        text-align: center;
+        font-size: 25px;
+        padding: 6px;
+        color: darkgoldenrod;
+    }
+    .input-info p{
+        font-size: 13px;
+        color: rgb(169,131,34);
+    }
+    .input{
+        display: block;
+        padding: 10px 20px;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+    }
+    .input-info h3{
+        padding: 10px;
+        font-size: 20px;
+        color: rgb(169,131,34);
+    }
+    label{
+        font-size: 15px;
+        padding: 10px;
+    }
+    .btn-input{
+        margin-top: 18px;
+        padding: 10px 20px;
+        background-color: rgb(176,176,22);
+        color: whitesmoke;
+        border: none;
+        border-radius: 90px;
+        cursor: pointer;
+    }
+    .btn-row{
+        background-color: aqua;
+        cursor: pointer;
+    }
+    .container5{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+    .container5 .item{
+        padding: 1.6rem 0.5rem;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-right:1px solid rgba(255,255,255,0.1);
+        transition:background-color 0.2s ease, color 0.3s ease;
+        cursor: pointer;
+    }
+    .container5 .item:last-child{
+        border-right: none;
+    }
+    .container5 .item:hover{
+        background-color: #FFD700;
+        color: black;
+    } 
+    @media (max-width:900px){
+        .container{
+            grid-template-columns: 1fr;
+            padding-top: 7rem; 
+            min-height: unset;
+        }
+        .container1{
+            padding: 0 2rem;
+            text-align: center;
+        }
+        .container h1{
+            font-size: 40px;
+        }
+        .container1 button{
+            margin:0 auto;
+        }
+        .container2{
+            padding: 1rem 1.5rem 3rem;
+        }
+        .container5{
+            grid-template-columns: repeat(3,1fr);
+        }
+        .container5 .item:nth-child(3)
+        {
+            border-right:none;
+        }
+        .container5 .item:nth-child(n+4)
+        {
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+    }
+    @media(max-width:600px){
+        nav{
+            justify-content: center;
+            height: auto;
+            padding: 0.8rem 0;
+        }
+        nav span:nth-child(1){
+            padding-left: 0;
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+        }
+        nav span:nth-child(9){
+            padding-right: 0;
+        }
+        .header{
+            height: 8.5rem;
+        }
+        .container{
+            padding-top: 1rem;
+        }
+        .container1 h1{
+            font-size: 32px;
+        }
+        .container1 p{
+            font-size: 16px;
+        }
+        .container5{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .container5 .item.item:nth-child(2n)
+        {
+            border-right: none;
+        }
+        .container5 .item:nth-child(n+3)
+        {
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    }
+    .work {
+    background-color: black;
+    display: flex;
+    padding: 20px;
+    margin-top: 2px;
+}
+
+.guy {
+    color:white;
+}
+.guy a{
+    color: #FFD700;
+}
+
+.buy {
+    color: white;
+    margin-left: 80%;
+}
+.buy a{
+    color: #FFD700;
+}
+.food{
+    background-color: #FFD700;
+    color: white;
+    border-radius: 13px;
+    
+}
